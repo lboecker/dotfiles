@@ -71,7 +71,7 @@ au FileType gitcommit set spell
 
 au FileType *
   \ if &omnifunc == '' |
-  \   set omnifunc=syntaxcomplete#Complete |
+  \   setlocal omnifunc=syntaxcomplete#Complete |
   \ endif
 
 function s:trim_trailing_whitespace()

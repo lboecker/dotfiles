@@ -1,3 +1,6 @@
+" The RGB colors come from Gnome Terminal's Tango color scheme. See
+" https://github.com/GNOME/gnome-terminal/blob/9f928c3a47f792ea3ac9f38942c669fb0370b32c/src/profile-editor.c#L215-L232
+
 hi clear
 if exists('syntax_on')
   syntax reset

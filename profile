@@ -7,7 +7,7 @@ pathmunge() {
     *:"$1":*)
       ;;
     *)
-      if [ "$2" = after ]; then
+      if [ "$2" = "after" ]; then
         PATH=$PATH:$1
       else
         PATH=$1:$PATH

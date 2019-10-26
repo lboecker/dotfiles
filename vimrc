@@ -5,14 +5,8 @@ endif
 call plug#begin('~/.vim/plugged')
 
 Plug 'junegunn/vim-easy-align'
+Plug 'sheerun/vim-polyglot'
 Plug 'tpope/vim-commentary'
-
-Plug 'cespare/vim-toml'
-Plug 'ekalinin/Dockerfile.vim'
-Plug 'leafgarland/typescript-vim'
-Plug 'othree/html5.vim'
-Plug 'pangloss/vim-javascript'
-Plug 'plasticboy/vim-markdown'
 
 call plug#end()
 
@@ -62,7 +56,6 @@ inoremap <expr> <Down> pumvisible() ? '<C-n>' : '<Down>'
 inoremap <expr> <Tab> pumvisible() ? '<C-n>' : '<Tab>'
 inoremap <expr> <CR> pumvisible() ? '<C-y>' : '<CR>'
 
-au BufNewFile,BufRead gitconfig set ft=gitconfig
 au BufWinEnter * let w:m0 = matchadd('LongLine', '\%>80v.\+', -1)
 au BufWritePre * call s:trim_trailing_whitespace()
 

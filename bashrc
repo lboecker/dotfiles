@@ -50,6 +50,8 @@ prompt_command() {
   if [[ "$TERM" = xterm* ]] || [[ -n "$TMUX" ]]; then
     PS1="\[\e]0;\u@\h: \w\a\]$PS1"
   fi
+
+  history -a && history -c && history -r
 }
 
 PROMPT_COMMAND=prompt_command

@@ -2,6 +2,8 @@ if [ -z "$LANG" ] && locale -a | grep -q '^en_US\.UTF-8$'; then
   export LANG=en_US.UTF-8
 fi
 
+export GOPATH=$HOME/src/gopath
+
 pathmunge() {
   case ":$PATH:" in
     *:"$1":*)
@@ -15,7 +17,9 @@ pathmunge() {
   esac
 }
 
+pathmunge "$GOPATH/bin"
 pathmunge ~/.local/bin
+
 pathmunge ~/bin
 
 unset -f pathmunge

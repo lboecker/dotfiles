@@ -20,6 +20,7 @@ pathmunge() {
 
 pathmunge ~/.local/bin
 pathmunge "$GOPATH/bin"
+command -v yarn >/dev/null 2>&1 && pathmunge "$(yarn global bin)"
 
 pathmunge ~/bin
 

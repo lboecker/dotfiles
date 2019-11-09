@@ -18,8 +18,8 @@ pathmunge() {
   esac
 }
 
-pathmunge "$GOPATH/bin"
 pathmunge ~/.local/bin
+pathmunge "$GOPATH/bin"
 
 pathmunge ~/bin
 

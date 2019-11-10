@@ -4,6 +4,7 @@ endif
 
 call plug#begin('~/.vim/plugged')
 
+Plug 'dense-analysis/ale'
 Plug 'junegunn/vim-easy-align'
 Plug 'sheerun/vim-polyglot'
 Plug 'tpope/vim-commentary'
@@ -43,7 +44,29 @@ set wildmode=longest,full
 let &listchars = "tab:\ \ ,nbsp:\u00b7"
 let mapleader = ','
 
+let g:ale_fix_on_save = 1
+let g:ale_linters_explicit = 1
 let g:vim_markdown_frontmatter = 1
+
+let g:ale_linters = {
+  \   'go': ['gofmt', 'golint', 'go vet'],
+  \   'graphql': ['eslint'],
+  \   'javascript': ['eslint'],
+  \   'sh': ['shellcheck'],
+  \   'typescript': ['eslint'],
+  \   'typescriptreact': ['eslint']
+  \ }
+
+let g:ale_fixers = {
+  \   '*': ['remove_trailing_lines', 'trim_whitespace'],
+  \   'css': ['prettier'],
+  \   'go': ['goimports'],
+  \   'graphql': ['eslint'],
+  \   'javascript': ['eslint'],
+  \   'json': ['prettier'],
+  \   'typescript': ['eslint'],
+  \   'typescriptreact': ['eslint']
+  \ }
 
 nnoremap <silent> <C-l> :nohlsearch<CR><C-l>
 nmap <silent> <Leader>i :call <SID>toggle_invisibles()<CR>
@@ -58,7 +81,6 @@ inoremap <expr> <Tab> pumvisible() ? '<C-n>' : '<Tab>'
 inoremap <expr> <CR> pumvisible() ? '<C-y>' : '<CR>'
 
 au BufWinEnter * let w:m0 = matchadd('LongLine', '\%>80v.\+', -1)
-au BufWritePre * call s:trim_trailing_whitespace()
 
 au BufNewFile,BufRead .babelrc,.eslintrc,.prettierrc set ft=json
 au FileType c,gitconfig,go,make set noet sts=0 sw=8
@@ -68,13 +90,6 @@ au FileType *
   \ if &omnifunc == '' |
   \   setlocal omnifunc=syntaxcomplete#Complete |
   \ endif
-
-function s:trim_trailing_whitespace()
-  let l = line('.')
-  let c = col('.')
-  %s/\s\+$//e
-  call cursor(l, c)
-endfunction
 
 function s:toggle_invisibles()
   if !exists('g:old_listchars')

@@ -1,3 +1,5 @@
+#!/bin/bash
+
 stty -ixon -ixoff
 
 shopt -s checkwinsize
@@ -24,6 +26,7 @@ alias ll='ls -Fhl'
 alias la='ls -AFhl'
 
 if [[ -f ~/.bash_aliases ]]; then
+  # shellcheck source=/dev/null
   . ~/.bash_aliases
 fi
 

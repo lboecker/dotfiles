@@ -1,3 +1,5 @@
+#!/bin/sh
+
 if [ -z "$LANG" ] && locale -a | grep -q '^en_US\.UTF-8$'; then
   export LANG=en_US.UTF-8
 fi
@@ -27,5 +29,6 @@ pathmunge ~/bin
 unset -f pathmunge
 
 if [ -n "$BASH_VERSION" ] && [ -n "$PS1" ]; then
+  # shellcheck source=/dev/null
   . ~/.bashrc
 fi

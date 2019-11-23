@@ -30,6 +30,7 @@ if [[ -f ~/.bash_aliases ]]; then
   . ~/.bash_aliases
 fi
 
+# shellcheck disable=SC1091
 if [[ -z "$BASH_COMPLETION_VERSINFO" ]] && ! shopt -oq posix; then
   if [[ -f /usr/share/bash-completion/bash_completion ]]; then
     . /usr/share/bash-completion/bash_completion

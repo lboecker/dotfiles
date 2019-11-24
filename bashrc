@@ -34,7 +34,7 @@ alias ll='ls -Fhl'
 alias la='ls -AFhl'
 
 if [[ -f ~/.bash_aliases ]]; then
-  # shellcheck source=/dev/null
+  # shellcheck disable=SC1090
   . ~/.bash_aliases
 fi
 

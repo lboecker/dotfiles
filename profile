@@ -29,6 +29,6 @@ pathmunge ~/bin
 unset -f pathmunge
 
 if [ -n "$BASH_VERSION" ] && [ -n "$PS1" ]; then
-  # shellcheck source=/dev/null
+  # shellcheck disable=SC1090
   . ~/.bashrc
 fi

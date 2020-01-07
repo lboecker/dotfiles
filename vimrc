@@ -20,6 +20,7 @@ set shiftwidth=2
 
 set autoindent
 set backspace=indent,eol,start
+set backupcopy=yes
 set encoding=utf-8
 set formatoptions+=j
 set history=1000

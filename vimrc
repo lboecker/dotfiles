@@ -54,8 +54,8 @@ let g:ale_linters = {
   \   'graphql': ['eslint'],
   \   'javascript': ['eslint'],
   \   'sh': ['shellcheck'],
-  \   'typescript': ['eslint'],
-  \   'typescriptreact': ['eslint']
+  \   'typescript': ['eslint', 'tsserver'],
+  \   'typescriptreact': ['eslint', 'tsserver']
   \ }
 
 let g:ale_fixers = {

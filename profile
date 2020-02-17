@@ -1,6 +1,6 @@
 #!/bin/sh
 
-if [ -z "$LANG" ] && locale -a | grep -q '^en_US\.UTF-8$'; then
+if [ -z "$LANG" ] && locale -a | grep -q '^en_US\.utf8$'; then
   export LANG=en_US.UTF-8
 fi
 

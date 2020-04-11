@@ -63,10 +63,12 @@ let g:ale_fixers = {
   \   'css': ['prettier'],
   \   'go': ['goimports'],
   \   'graphql': ['eslint'],
+  \   'html': ['prettier'],
   \   'javascript': ['eslint'],
   \   'json': ['prettier'],
   \   'typescript': ['eslint'],
-  \   'typescriptreact': ['eslint']
+  \   'typescriptreact': ['eslint'],
+  \   'yaml': ['prettier']
   \ }
 
 nnoremap <silent> <C-l> :nohlsearch<CR><C-l>

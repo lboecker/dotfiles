@@ -85,7 +85,7 @@ inoremap <expr> <CR> pumvisible() ? '<C-y>' : '<CR>'
 
 au BufWinEnter * let w:m0 = matchadd('LongLine', '\%>80v.\+', -1)
 
-au BufNewFile,BufRead .babelrc,.eslintrc,.prettierrc set ft=json
+au BufNewFile,BufRead .babelrc set ft=json
 au FileType c,gitconfig,go,make set noet sts=0 sw=8
 au FileType gitcommit set spell
 

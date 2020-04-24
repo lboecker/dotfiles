@@ -53,6 +53,7 @@ let g:ale_linters = {
   \   'go': ['gofmt', 'golint', 'go vet'],
   \   'graphql': ['eslint'],
   \   'javascript': ['eslint'],
+  \   'javascriptreact': ['eslint'],
   \   'sh': ['shellcheck'],
   \   'typescript': ['eslint', 'tsserver'],
   \   'typescriptreact': ['eslint', 'tsserver']
@@ -65,6 +66,7 @@ let g:ale_fixers = {
   \   'graphql': ['eslint'],
   \   'html': ['prettier'],
   \   'javascript': ['eslint'],
+  \   'javascriptreact': ['eslint'],
   \   'typescript': ['eslint'],
   \   'typescriptreact': ['eslint']
   \ }

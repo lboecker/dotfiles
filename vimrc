@@ -65,10 +65,8 @@ let g:ale_fixers = {
   \   'graphql': ['eslint'],
   \   'html': ['prettier'],
   \   'javascript': ['eslint'],
-  \   'json': ['prettier'],
   \   'typescript': ['eslint'],
-  \   'typescriptreact': ['eslint'],
-  \   'yaml': ['prettier']
+  \   'typescriptreact': ['eslint']
   \ }
 
 nnoremap <silent> <C-l> :nohlsearch<CR><C-l>

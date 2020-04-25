@@ -4,6 +4,7 @@ endif
 
 call plug#begin('~/.vim/plugged')
 
+Plug 'ctrlpvim/ctrlp.vim'
 Plug 'dense-analysis/ale'
 Plug 'junegunn/vim-easy-align'
 Plug 'sheerun/vim-polyglot'
@@ -44,6 +45,9 @@ set wildmode=longest,full
 
 let &listchars = "tab:\ \ ,nbsp:\u00b7"
 let mapleader = ','
+
+let g:ctrlp_user_command =
+  \ ['.git', 'cd %s && git ls-files -co --exclude-standard']
 
 let g:ale_fix_on_save = 1
 let g:ale_linters_explicit = 1

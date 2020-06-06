@@ -5,7 +5,6 @@ if [ -z "$LANG" ] && locale -a | grep -q '^en_US\.utf8$'; then
 fi
 
 export GOPATH=~/src/gopath
-export VAGRANT_DEFAULT_PROVIDER=libvirt
 
 pathmunge() {
   case ":$PATH:" in

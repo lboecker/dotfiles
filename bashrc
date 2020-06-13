@@ -47,13 +47,22 @@ if [[ -z "$BASH_COMPLETION_VERSINFO" ]] && ! shopt -oq posix; then
   fi
 fi
 
+# shellcheck disable=SC1090
+if [[ -f ~/miniconda3/etc/profile.d/conda.sh ]]; then
+  . ~/miniconda3/etc/profile.d/conda.sh
+elif [[ -f ~/anaconda3/etc/profile.d/conda.sh ]]; then
+  . ~/anaconda3/etc/profile.d/conda.sh
+fi
+
 prompt_command() {
   local exit_status=$?
   local branch
   local status_color
   local prompt_char=$'\u00b7'
 
-  PS1="\[\e[1;32m\]\u@\h\[\e[0m\] \[\e[1;34m\]\w\[\e[0m\] "
+  PS1="\[\e[1;34m\]$CONDA_PROMPT_MODIFIER\[\e[0m\]"
+
+  PS1+="\[\e[1;32m\]\u@\h\[\e[0m\] \[\e[1;34m\]\w\[\e[0m\] "
 
   if [[ "$(git rev-parse --is-inside-work-tree 2>/dev/null)" = "true" ]] ||
      [[ "$(git rev-parse --is-inside-git-dir 2>/dev/null)" = "true" ]]; then

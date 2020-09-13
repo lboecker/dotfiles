@@ -13,11 +13,11 @@ HISTCONTROL=ignoreboth
 export VISUAL=vim
 export PAGER=less
 
-if [[ -x /usr/bin/lesspipe ]]; then
+if command -v lesspipe >/dev/null 2>&1; then
   eval "$(SHELL=/bin/sh lesspipe)"
 fi
 
-if [[ -x /usr/bin/dircolors ]]; then
+if command -v dircolors >/dev/null 2>&1; then
   if [[ -r ~/.dircolors ]]; then
     eval "$(dircolors -b ~/.dircolors)"
   else

@@ -20,7 +20,10 @@ pathmunge() {
 }
 
 pathmunge ~/.local/bin
+
 pathmunge "$GOPATH/bin"
+pathmunge "$HOME/.cargo/bin"
+
 pathmunge ~/bin
 
 unset -f pathmunge

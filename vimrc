@@ -30,6 +30,7 @@ set hlsearch
 set ignorecase
 set incsearch
 set list
+set mouse=a
 set nofoldenable
 set nomodeline
 set nowrap
@@ -41,6 +42,7 @@ set smartcase
 set spelllang=en_us
 set ttimeout
 set ttimeoutlen=100
+set ttymouse=xterm2
 set wildmenu
 set wildmode=longest,full
 

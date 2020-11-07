@@ -18,7 +18,7 @@ pathmunge() {
 }
 
 pathmunge ~/.local/bin
-pathmunge "$HOME/.cargo/bin"
+pathmunge ~/.cargo/bin
 pathmunge ~/bin
 
 unset -f pathmunge

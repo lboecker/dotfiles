@@ -14,7 +14,7 @@ export VISUAL=vim
 export PAGER=less
 
 if command -v lesspipe >/dev/null 2>&1; then
-  eval "$(SHELL=/bin/sh lesspipe)"
+  eval "$(lesspipe)"
 fi
 
 if command -v dircolors >/dev/null 2>&1; then
@@ -26,8 +26,6 @@ if command -v dircolors >/dev/null 2>&1; then
 fi
 
 alias grep='grep --color=auto'
-alias egrep='egrep --color=auto'
-alias fgrep='fgrep --color=auto'
 
 alias ls='ls --color=auto'
 alias ll='ls -Fhl'
@@ -39,12 +37,9 @@ if [[ -f ~/.bash_aliases ]]; then
 fi
 
 # shellcheck disable=SC1091
-if [[ -z "$BASH_COMPLETION_VERSINFO" ]] && ! shopt -oq posix; then
-  if [[ -f /usr/share/bash-completion/bash_completion ]]; then
-    . /usr/share/bash-completion/bash_completion
-  elif [[ -f /etc/bash_completion ]]; then
-    . /etc/bash_completion
-  fi
+if [[ -z "$BASH_COMPLETION_VERSINFO" ]] &&
+   [[ -f /usr/share/bash-completion/bash_completion ]]; then
+  . /usr/share/bash-completion/bash_completion
 fi
 
 # shellcheck disable=SC1090

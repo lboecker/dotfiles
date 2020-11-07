@@ -43,9 +43,9 @@ if command -v dircolors >/dev/null 2>&1; then
   fi
 fi
 
-# shellcheck disable=SC1091
 if [[ -z "$BASH_COMPLETION_VERSINFO" ]] &&
    [[ -f /usr/share/bash-completion/bash_completion ]]; then
+  # shellcheck disable=SC1091
   . /usr/share/bash-completion/bash_completion
 fi
 

@@ -57,7 +57,6 @@ let g:ale_linters_explicit = 1
 let g:vim_markdown_frontmatter = 1
 
 let g:ale_linters = {
-  \   'graphql': ['eslint'],
   \   'javascript': ['eslint'],
   \   'javascriptreact': ['eslint'],
   \   'rust': ['analyzer'],
@@ -69,7 +68,6 @@ let g:ale_linters = {
 let g:ale_fixers = {
   \   '*': ['remove_trailing_lines', 'trim_whitespace'],
   \   'css': ['prettier'],
-  \   'graphql': ['eslint'],
   \   'html': ['prettier'],
   \   'javascript': ['eslint'],
   \   'javascriptreact': ['eslint'],

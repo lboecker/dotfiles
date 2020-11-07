@@ -13,6 +13,24 @@ HISTCONTROL=ignoreboth
 export VISUAL=vim
 export PAGER=less
 
+alias grep='grep --color=auto'
+
+alias ls='ls --color=auto'
+alias ll='ls -Fhl'
+alias la='ls -AFhl'
+
+if [[ -f ~/.bash_aliases ]]; then
+  # shellcheck disable=SC1090
+  . ~/.bash_aliases
+fi
+
+# shellcheck disable=SC1090
+if [[ -f ~/miniconda3/etc/profile.d/conda.sh ]]; then
+  . ~/miniconda3/etc/profile.d/conda.sh
+elif [[ -f ~/anaconda3/etc/profile.d/conda.sh ]]; then
+  . ~/anaconda3/etc/profile.d/conda.sh
+fi
+
 if command -v lesspipe >/dev/null 2>&1; then
   eval "$(lesspipe)"
 fi
@@ -25,28 +43,10 @@ if command -v dircolors >/dev/null 2>&1; then
   fi
 fi
 
-alias grep='grep --color=auto'
-
-alias ls='ls --color=auto'
-alias ll='ls -Fhl'
-alias la='ls -AFhl'
-
-if [[ -f ~/.bash_aliases ]]; then
-  # shellcheck disable=SC1090
-  . ~/.bash_aliases
-fi
-
 # shellcheck disable=SC1091
 if [[ -z "$BASH_COMPLETION_VERSINFO" ]] &&
    [[ -f /usr/share/bash-completion/bash_completion ]]; then
   . /usr/share/bash-completion/bash_completion
-fi
-
-# shellcheck disable=SC1090
-if [[ -f ~/miniconda3/etc/profile.d/conda.sh ]]; then
-  . ~/miniconda3/etc/profile.d/conda.sh
-elif [[ -f ~/anaconda3/etc/profile.d/conda.sh ]]; then
-  . ~/anaconda3/etc/profile.d/conda.sh
 fi
 
 prompt_command() {

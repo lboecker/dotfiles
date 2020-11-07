@@ -57,7 +57,6 @@ let g:ale_linters_explicit = 1
 let g:vim_markdown_frontmatter = 1
 
 let g:ale_linters = {
-  \   'go': ['gofmt', 'golint', 'go vet'],
   \   'graphql': ['eslint'],
   \   'javascript': ['eslint'],
   \   'javascriptreact': ['eslint'],
@@ -70,7 +69,6 @@ let g:ale_linters = {
 let g:ale_fixers = {
   \   '*': ['remove_trailing_lines', 'trim_whitespace'],
   \   'css': ['prettier'],
-  \   'go': ['goimports'],
   \   'graphql': ['eslint'],
   \   'html': ['prettier'],
   \   'javascript': ['eslint'],
@@ -97,7 +95,7 @@ inoremap <expr> <CR> pumvisible() ? '<C-y>' : '<CR>'
 au BufWinEnter * let w:m0 = matchadd('LongLine', '\%>80v.\+', -1)
 
 au BufNewFile,BufRead .babelrc set ft=json
-au FileType c,gitconfig,go,make set noet sts=0 sw=8
+au FileType c,gitconfig,make set noet sts=0 sw=8
 au FileType gitcommit set spell
 
 au FileType *

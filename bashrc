@@ -20,11 +20,9 @@ alias ll='ls -Fhl'
 alias la='ls -AFhl'
 
 if [[ -f ~/.bash_aliases ]]; then
-  # shellcheck disable=SC1090
   . ~/.bash_aliases
 fi
 
-# shellcheck disable=SC1090
 if [[ -f ~/miniconda3/etc/profile.d/conda.sh ]]; then
   . ~/miniconda3/etc/profile.d/conda.sh
 elif [[ -f ~/anaconda3/etc/profile.d/conda.sh ]]; then
@@ -45,7 +43,6 @@ fi
 
 if [[ -z "$BASH_COMPLETION_VERSINFO" ]] &&
    [[ -f /usr/share/bash-completion/bash_completion ]]; then
-  # shellcheck disable=SC1091
   . /usr/share/bash-completion/bash_completion
 fi
 

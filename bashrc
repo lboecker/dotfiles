@@ -15,7 +15,7 @@ export PAGER=less
 
 alias grep='grep --color=auto'
 
-alias ls='ls --color=auto'
+alias ls='LC_COLLATE=C ls --color=auto'
 alias ll='ls -Fhl'
 alias la='ls -AFhl'
 

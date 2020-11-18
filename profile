@@ -4,24 +4,20 @@ if [ -z "$LANG" ] && locale -a | grep -q '^en_US\.utf8$'; then
   export LANG=en_US.UTF-8
 fi
 
-pathmunge() {
+prepend_path() {
   case ":$PATH:" in
     *:"$1":*)
       ;;
     *)
-      if [ "$2" = "after" ]; then
-        PATH=$PATH:$1
-      else
-        PATH=$1:$PATH
-      fi
+      PATH=$1${PATH:+:$PATH}
   esac
 }
 
-pathmunge ~/.local/bin
-pathmunge ~/.cargo/bin
-pathmunge ~/bin
+prepend_path ~/.local/bin
+prepend_path ~/.cargo/bin
+prepend_path ~/bin
 
-unset -f pathmunge
+unset -f prepend_path
 
 if [ -n "$BASH_VERSION" ] && [ -n "$PS1" ]; then
   . ~/.bashrc

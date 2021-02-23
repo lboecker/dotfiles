@@ -15,7 +15,12 @@ export PAGER=less
 
 alias grep='grep --color=auto'
 
-alias ls='LC_COLLATE=C ls --color=auto'
+if ls --group-directories-first /dev/null >/dev/null 2>&1; then
+  alias ls='LC_COLLATE=C ls --color=auto --group-directories-first'
+else
+  alias ls='LC_COLLATE=C ls --color=auto'
+fi
+
 alias ll='ls -Fhl'
 alias la='ls -AFhl'
 

@@ -15,7 +15,7 @@ export PAGER=less
 
 alias grep='grep --color=auto'
 
-if ls --group-directories-first /dev/null >/dev/null 2>&1; then
+if ls --group-directories-first /dev/null > /dev/null 2>&1; then
   alias ls='LC_COLLATE=C ls --color=auto --group-directories-first'
 else
   alias ls='LC_COLLATE=C ls --color=auto'
@@ -34,11 +34,11 @@ elif [[ -f ~/anaconda3/etc/profile.d/conda.sh ]]; then
   . ~/anaconda3/etc/profile.d/conda.sh
 fi
 
-if command -v lesspipe >/dev/null 2>&1; then
+if command -v lesspipe > /dev/null 2>&1; then
   eval "$(lesspipe)"
 fi
 
-if command -v dircolors >/dev/null 2>&1; then
+if command -v dircolors > /dev/null 2>&1; then
   if [[ -r ~/.dircolors ]]; then
     eval "$(dircolors -b ~/.dircolors)"
   else

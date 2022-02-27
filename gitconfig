@@ -1,10 +1,13 @@
 [user]
 	name = Lukas Böcker
 	email = lukas@lukasboecker.de
+	signingkey = 07F4EC67F111AEC1
 [core]
 	excludesFile = ~/.gitignore_global
 [init]
 	defaultBranch = main
+[commit]
+	gpgsign = true
 [pull]
 	rebase = true
 [pager]

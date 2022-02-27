@@ -13,6 +13,11 @@ HISTCONTROL=ignoreboth
 export VISUAL=vim
 export PAGER=less
 
+if command -v gpg > /dev/null 2>&1; then
+  # shellcheck disable=SC2155
+  export GPG_TTY=$(tty)
+fi
+
 alias grep='grep --color=auto'
 
 if ls --group-directories-first /dev/null > /dev/null 2>&1; then

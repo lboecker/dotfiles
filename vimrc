@@ -60,7 +60,6 @@ let g:vim_markdown_frontmatter = 1
 let g:ale_linters = {
   \   'javascript': ['eslint'],
   \   'javascriptreact': ['eslint'],
-  \   'rust': ['analyzer'],
   \   'sh': ['shellcheck'],
   \   'typescript': ['eslint', 'tsserver'],
   \   'typescriptreact': ['eslint', 'tsserver']
@@ -72,11 +71,8 @@ let g:ale_fixers = {
   \   'html': ['prettier'],
   \   'javascript': ['eslint'],
   \   'javascriptreact': ['eslint'],
-  \   'json': ['prettier'],
-  \   'rust': ['rustfmt'],
   \   'typescript': ['eslint'],
   \   'typescriptreact': ['eslint'],
-  \   'yaml': ['prettier']
   \ }
 
 nnoremap <silent> <C-l> :nohlsearch<CR><C-l>

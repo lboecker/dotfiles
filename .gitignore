@@ -1,4 +1,3 @@
-/vim/.netrwhist
-/vim/autoload/plug.vim.old
-/vim/plugged
-/vim/spell
+/vim
+!/vim/autoload/plug.vim
+!/vim/colors/lboecker.vim

@@ -33,11 +33,10 @@ if [[ -f ~/.bash_aliases ]]; then
   . ~/.bash_aliases
 fi
 
-if [[ -f ~/miniconda3/etc/profile.d/conda.sh ]]; then
-  . ~/miniconda3/etc/profile.d/conda.sh
-elif [[ -f ~/anaconda3/etc/profile.d/conda.sh ]]; then
-  . ~/anaconda3/etc/profile.d/conda.sh
-fi
+conda_script_dir=~/conda/etc/profile.d
+test -f $conda_script_dir/conda.sh && source $conda_script_dir/conda.sh
+test -f $conda_script_dir/mamba.sh && source $conda_script_dir/mamba.sh
+unset conda_script_dir
 
 if command -v lesspipe > /dev/null 2>&1; then
   eval "$(lesspipe)"

@@ -1,6 +1,6 @@
 # dotfiles
 
-![GitHub Workflow Status (branch)](https://img.shields.io/github/workflow/status/lboecker/dotfiles/CI/main?label=ci)
+![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/lboecker/dotfiles/ci.yaml)
 
 My dotfiles
 

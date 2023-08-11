@@ -1,6 +1,6 @@
 # dotfiles
 
-![ci](https://github.com/lboecker/dotfiles/actions/workflows/ci.yaml/badge.svg)
+![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/lboecker/dotfiles/ci.yaml)
 
 My dotfiles
 

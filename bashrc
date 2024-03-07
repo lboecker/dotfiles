@@ -33,6 +33,7 @@ if [[ -f ~/.bash_aliases ]]; then
   . ~/.bash_aliases
 fi
 
+test -f /usr/share/nvm/init-nvm.sh && . /usr/share/nvm/init-nvm.sh
 test -f ~/conda/etc/profile.d/conda.sh && . ~/conda/etc/profile.d/conda.sh
 
 if command -v lesspipe > /dev/null 2>&1; then

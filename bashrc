@@ -13,6 +13,8 @@ HISTCONTROL=ignoreboth
 export VISUAL=vim
 export PAGER=less
 
+export NVM_DIR=~/.nvm
+
 if command -v gpg > /dev/null 2>&1; then
   # shellcheck disable=SC2155
   export GPG_TTY=$(tty)
@@ -33,7 +35,9 @@ if [[ -f ~/.bash_aliases ]]; then
   . ~/.bash_aliases
 fi
 
-test -f /usr/share/nvm/init-nvm.sh && . /usr/share/nvm/init-nvm.sh
+test -f "$NVM_DIR/nvm.sh" && . "$NVM_DIR/nvm.sh"
+test -f "$NVM_DIR/bash_completion" && . "$NVM_DIR/bash_completion"
+
 test -f ~/conda/etc/profile.d/conda.sh && . ~/conda/etc/profile.d/conda.sh
 
 if command -v lesspipe > /dev/null 2>&1; then

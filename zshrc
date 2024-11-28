@@ -33,13 +33,6 @@ export BUN_INSTALL=~/.bun
 alias ll='ls -Fhl'
 alias la='ls -AFhl'
 
-#
-# Node Version Manager
-#
-
-export NVM_DIR=~/.nvm
-[[ -s ${NVM_DIR}/nvm.sh ]] && . ${NVM_DIR}/nvm.sh
-
 # -----------------
 # Zim configuration
 # -----------------
@@ -103,10 +96,3 @@ for key ('^[[B' '^N' ${terminfo[kcud1]}) bindkey ${key} history-substring-search
 for key ('k') bindkey -M vicmd ${key} history-substring-search-up
 for key ('j') bindkey -M vicmd ${key} history-substring-search-down
 unset key
-
-#
-# Node Version Manager
-#
-
-# nvm's completion must be initialized after the completion module.
-[[ -s ${NVM_DIR}/bash_completion ]] && . ${NVM_DIR}/bash_completion
